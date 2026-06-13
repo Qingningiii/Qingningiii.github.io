@@ -24,8 +24,8 @@ export default function ProjectsPage() {
           LOCAL_HOST // SESSION: PROJECT_HUB_0x3F
         </div>
         <h1 className="font-display-lg text-headline-lg-mobile md:text-display-lg uppercase tracking-tight text-on-surface">
-          <GlitchText speed={1.2} enableShadows enableOnHover className="inline-block">
-            张超 · 项目案例
+          <GlitchText speed={1.2} enableShadows enableOnHover={false} className="inline-block">
+            项目案例
           </GlitchText>{' '}
           <span className="text-primary-container">(SECURE_ARCHIVE)</span>
         </h1>
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
           </div>
           <div className="flex flex-col h-full">
             <h2 className="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary-fixed-dim mb-4">
-              独立 AI 客户服务系统<br />
+              独立站智能客服系统<br />
               <span className="text-on-surface-variant text-headline-md opacity-80">(LLM+RAG+Agent+Skills)</span>
             </h2>
 

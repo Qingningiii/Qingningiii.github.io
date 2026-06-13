@@ -33,12 +33,12 @@ export default function AboutPage() {
             <GlitchText
               speed={1}
               enableShadows
-              enableOnHover
+              enableOnHover={false}
               className="inline-block"
             >
-              张超
+              关于我
             </GlitchText>{' '}
-            <span className="text-primary-fixed-dim opacity-50 font-label-md text-headline-md">· 关于我</span>
+            <span className="text-primary-fixed-dim opacity-50 font-label-md text-headline-md">· BIOMETRIC_PROFILE</span>
           </h1>
           <h2 className="font-headline-lg text-headline-lg text-on-surface-variant">
             智能流的构建者 <span className="text-secondary animate-pulse">_</span>

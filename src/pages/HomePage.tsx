@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DefaultLayout from '../layouts/DefaultLayout';
 import GlitchText from '../components/GlitchText';
+import SpotlightCard from '../components/SpotlightCard';
 
 export default function HomePage() {
   const typewriterRef = useRef<HTMLSpanElement>(null);
@@ -109,8 +110,11 @@ export default function HomePage() {
       {/* Bento Grid */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter h-auto lg:h-[600px]">
         {/* LLM Architecture */}
-        <div className="md:col-span-8 bg-surface-container border border-outline-variant p-margin-md flex flex-col justify-between chamfer-tr relative overflow-hidden group">
-          <div className="relative z-10">
+        <SpotlightCard
+          spotlightColor="rgba(0, 255, 136, 0.15)"
+          className="md:col-span-8 bg-surface-container border border-outline-variant p-margin-md flex flex-col justify-between chamfer-tr"
+        >
+          <div>
             <h3 className="font-headline-lg text-primary mb-stack-md flex items-center gap-4">
               <span className="material-symbols-outlined text-primary-fixed-dim">token</span>
               LLM 架构集成
@@ -119,12 +123,12 @@ export default function HomePage() {
               深耕基于 RAG (检索增强生成) 的知识库构建，优化向量数据库检索效率，实现高度可控的 AI 对话体验。通过多模型调度策略，在成本与性能间取得极致平衡。
             </p>
           </div>
-          <div className="relative z-10 flex gap-4 mt-8 overflow-x-auto pb-4">
+          <div className="flex gap-4 mt-8 overflow-x-auto pb-4">
             {['GPT-4_TURBO', 'CLAUDE-3_OPUS', 'VECTOR_DB_PINECONE', 'LANGCHAIN_PRO'].map(t => (
               <span key={t} className="bg-surface-container-highest px-4 py-2 border border-outline font-code-sm whitespace-nowrap">{t}</span>
             ))}
           </div>
-        </div>
+        </SpotlightCard>
 
         {/* Core Logic */}
         <div className="md:col-span-4 grid grid-rows-2 gap-gutter">
@@ -132,11 +136,15 @@ export default function HomePage() {
             { id: 'CORE_LOGIC_01', title: 'SaaS 规模化',  desc: '从 0 到 1 构建可扩展的产品体系，支撑百万级并发请求。' },
             { id: 'CORE_LOGIC_02', title: '严谨产品管理', desc: '数据驱动决策，全生命周期管控，确保逻辑无死角。' },
           ].map(c => (
-            <div key={c.id} className="bg-surface-container border border-outline-variant p-margin-md chamfer-tr group hover:bg-primary/5 transition-colors">
+            <SpotlightCard
+              key={c.id}
+              spotlightColor="rgba(0, 255, 136, 0.12)"
+              className="bg-surface-container border border-outline-variant p-margin-md chamfer-tr hover:bg-primary/5 transition-colors"
+            >
               <div className="font-label-md text-secondary-fixed-dim mb-4 tracking-widest font-bold">{c.id}</div>
               <h4 className="font-headline-md text-primary mb-2">{c.title}</h4>
               <p className="font-body-md text-on-surface-variant">{c.desc}</p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
       </section>
