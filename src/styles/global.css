@@ -1,0 +1,2 @@
+/* Reset only — all styling done via Tailwind CDN classes */
+*, *::before, *::after { box-sizing: border-box; }
